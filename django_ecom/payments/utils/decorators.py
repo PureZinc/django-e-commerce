@@ -2,6 +2,7 @@ import stripe
 from django.conf import settings
 from django.contrib import messages
 
+
 stripe.api_key = getattr(settings, 'STRIPE_SECRET_KEY', None)  # Add your stripe key to the settings.py file
 
 def payment_process(func):

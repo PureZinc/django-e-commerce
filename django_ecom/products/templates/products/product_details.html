@@ -1,0 +1,14 @@
+<h1>Product Details</h1>
+<ul>
+    {% if product %}
+        <li>{{ product.name }}</li>
+        <li>{{ product.description }}</li>
+        <li>{{ product.price }}</li>
+        <li>{{ product.stock }}</li>
+        <a href="{% url 'add_to_cart' id=product.id quantity=1 %}" class="button">Add To Cart</a>
+        <a href="{% url 'products' %}">Go Back</button>
+    {% else %}
+        <p>Product doesn't exist</p>
+    {% endif %}
+</ul>
+{% include 'messages.html' %}

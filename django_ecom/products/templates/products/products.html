@@ -1,0 +1,14 @@
+<h1>Product List</h1>
+<ul>
+    {% if products %}
+        {% for product in products %}
+            <li>{{ product.name }} - ${{ product.price }} | Stock: {{ product.stock }}</li>
+            <a href="{% url 'product_detail' product.slug %}" class="button">View</a>
+            <a href="{% url 'add_to_cart' id=product.id quantity=1 %}" class="button">Add To Cart</a>
+        {% endfor %}
+    {% else %}
+        <p>There are no products</p>
+    {% endif %}
+</ul>
+<a href="{% url 'my_cart' %}">View Cart</a>
+{% include 'messages.html' %}

@@ -1,0 +1,9 @@
+{% load static %}
+<h1>Checkout</h1>
+<h3>Total: {{ total }}</h3>
+<div id="card-element" class="form-control"></div>
+<div id="card-errors" role="alert"></div>
+{% include 'messages.html' %}
+
+<script src="https://js.stripe.com/v3/"></script>
+<script src="{% static 'payments/payment.js' %}"></script>

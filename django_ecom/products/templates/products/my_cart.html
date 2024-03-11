@@ -1,0 +1,14 @@
+<h1>My Cart</h1>
+<ul>
+    {% if items %}
+        {% for item in items %}
+            <li>{{ item.product.name }} - ${{ item.product.price }} | Quantity: {{ item.quantity }}</li>
+            <a href="{% url 'product_detail' item.product.slug %}">View</a>
+            <a href="{% url 'remove_from_cart' id=item.product.id quantity=1 %}">Remove</a>
+        {% endfor %}
+        <a href="{% url 'checkout' %}">Checkout</a>
+    {% else %}
+        <p>There are no products</p>
+    {% endif %}
+</ul>
+{% include 'messages.html' %}
