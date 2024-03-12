@@ -1,7 +1,7 @@
 from django.shortcuts import redirect
 from django.views import generic
 from .models import Product, ProductImage, ShoppingCartItem
-from django_ecom.utils import get_session
+from ..utils import get_session
 from .utils import add_to_cart, remove_from_cart
 
 # Create your views here.

@@ -1,5 +1,5 @@
 from django.db import models
-from products.models import ShoppingCartItem
+from ..products.models import ShoppingCartItem
 from django.contrib.sessions.models import Session
 
 

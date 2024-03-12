@@ -1,8 +1,8 @@
-from .models import ShoppingCartItem
+from ..products.models import ShoppingCartItem
 from django.db import transaction
 from django.contrib import messages
-from django_ecom.utils import get_session
-from payments.utils.decorators import payment_process
+from ..utils import get_session
+from ..payments.utils.decorators import payment_process
 from .models import Order, OrderProduct
 
 

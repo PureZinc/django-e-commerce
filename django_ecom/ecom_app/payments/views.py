@@ -1,8 +1,6 @@
 from django.shortcuts import render
-from django_ecom.utils import get_session
-from orders.utils import submit_payment, get_total
-
-# Create your views here.
+from ..utils import get_session
+from ..orders.utils import submit_payment, get_total
 
 
 def payment_view(request):

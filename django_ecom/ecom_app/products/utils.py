@@ -1,7 +1,7 @@
 from .models import ShoppingCartItem
 from django.db import transaction
 from django.contrib import messages
-from django_ecom.utils import get_session
+from ..utils import get_session
 
 
 @transaction.atomic
